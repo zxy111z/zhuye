@@ -68,23 +68,6 @@
         #menu a:hover{
             color: coral;
             font-weight: 600;
-            transition: all 1s;
-        }
-        .two-left{
-            width:80%;
-            height:100%;
-            background:skyblue;
-            float:left;
-            transform:translateX(-1000px);
-            transition:.5s all;
-        }
-        .two-right{
-            width:20%;
-            height:100%;
-            background:skyblue;
-            float:left;
-            transform:translateX(1000px);
-            transition:.5s all;
         }
         .section:nth-of-type(1){
             width: 100%;
@@ -154,10 +137,27 @@
             border-radius: 5px;
             font-family: "Microsoft Yahei", tahoma, arial, "Hiragino Sans GB";
             display: block;
+            cursor: pointer;
+            text-decoration: none;
         }
         .button:hover{
             background: rgba(0,0,0,0.5);
             transition: all 1s;
+        }
+        /*//第二屏开始*/
+        .two-left{
+            width:80%;
+            height:100%;
+            float:left;
+            transform:translateX(-1000px);
+            transition:.5s all;
+        }
+        .two-right{
+            width:20%;
+            height:100%;
+            float:left;
+            transform:translateX(1000px);
+            transition:.5s all;
         }
         .me-box{
             width: 700px;
@@ -182,6 +182,14 @@
             background:rgba(255,255,255,0.7);
             margin-left: -550px;
             margin-top: 90%;
+        }
+        .border-top{
+            width: 200px;
+            height: 10px;
+            background: #F6A802;
+            float: right;
+            border-radius: 50px;
+            margin-top: -5px;
         }
         .my-left{
             width: 50%;
@@ -310,129 +318,422 @@
         .my-right span:nth-of-type(4){
             background: hotpink;
         }
+        /*第三屏开始*/
+        .jd-box{
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .jd-box p{
+            text-align: center;
+            font-size: 18px;
+            position: absolute;
+            top: 110px;
+            left: 50px;
+            font-family: courier new, courier, monospace;
+            animation: fadeIn 2s ease-in;
+            color: orangered;
+            font-weight: 600;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+        .jn-left{
+            width: 130px;
+            height: 346px;
+            float: left;
+            background:url("img/girl(2).jpg") no-repeat 0 50%;
+            margin-top: 180px;
+            margin-left: 100px;
+            background-size: 130px 346px;
+        }
+        .jn-center,.jn-right{
+            width: 600px;
+            height: 200px;
+            position: absolute;
+            left: 37%;
+            top: 130px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .jd-box span{
+            font-size: 14px;
+            position: absolute;
+            left: 46%;
+            top: 310px;
+        }
+        .jd-box span:nth-of-type(2){
+            left: 67%;
+        }
+        .jd-box span:nth-of-type(3){
+            left: 87%;
+        }
+        .jn-right{
+            top: 330px;
+            left: 38%;
+        }
+        .jd-box span:nth-of-type(4){
+            top: 510px;
+            left: 47%;
+        }
+        .jd-box span:nth-of-type(5){
+            left: 68%;
+            top: 510px;
+        }
+        .jd-box span:nth-of-type(6){
+            left: 88%;
+            top: 510px;
+        }
+        /*//第四屏开始*/
+        .scene{
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            width: 500px;
+            height: 300px;
+            margin:0 auto;
+            position: relative;
+        }
+        .scene ul{
+            padding: 0;
+            list-style: none;
+            width: 220px;
+            height: 260px;
+            margin:150px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 1s;
+            transform-origin: center center -273px;
+        }
+        .scene ul li{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left:0;
+            top:200px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 260px;
+            transform-origin: center center -273px;
+        }
+        .scene ul li img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .scene ul li:nth-child(1){
+            transform: rotateY(60deg);
+        }
+        .scene ul li:nth-child(2){
+            transform: rotateY(120deg);
+        }
+        .scene ul li:nth-child(3){
+            transform: rotateY(180deg);
+
+        }
+        .scene ul li:nth-child(4){
+            transform: rotateY(240deg);
+
+        }
+        .scene ul li:nth-child(5){
+            transform: rotateY(300deg)
+        }
+        .scene ul li:nth-child(6){
+            transform: rotateY(360deg);
+        }
+        .mask{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 1s;
+        }
+        .title{
+            width: 100px;
+            height: 25px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 25px;
+            font-size: 14px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transition: all 1s;
+        }
+        .title a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .title:hover{
+            background: orangered;
+            border: none;
+        }
+        .scene ul li:hover .mask{
+            opacity: 1;
+        }
+        .next,.prev{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top:270px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .next{
+            right:-100px;
+        }
+        .prev{
+            left: -100px;;
+        }
+        /*第五屏开始*/
+        .section:nth-of-type(2){
+            width: 100%;
+            height: 100%;
+            background: url("img/se5.jpg");
+        }
+        .section:nth-of-type(3){
+            width: 100%;
+            height: 100%;
+            background: url("img/se2.jpg");
+        }
+        .section:nth-of-type(4){
+            width: 100%;
+            height: 100%;
+            background: url("img/banner.png");
+        }
+        .section:nth-of-type(5){
+            width: 100%;
+            height: 100%;
+            background: url("img/se1.jpg");
+        }
+        /*第五屏开始*/
+        #J_dotLine{
+            display: block;
+            margin: 0 auto;
+           background: #333;
+        }
     </style>
 </head>
 <body>
-<div id="container">
-    <div id="menu">
-        <ul>
-            <li>
-                <a href="#p1" class="logo">
-                    <img src="img/logo.png" alt="">
-                    <span>ZhangXueYun</span>
-                </a>
-            </li>
-            <li data-menuanchor="p1"  class="active">
-                <a href="#p1">首页</a>
-            </li>
-            <li data-menuanchor="p2">
-                <a href="#p2">关于我</a>
-            </li>
-            <li data-menuanchor="p3">
-                <a href="#p3">技能展示</a>
-            </li>
-            <li data-menuanchor="p4">
-                <a href="#p4">项目经验</a>
-            </li>
-            <li data-menuanchor="p5">
-                <a href="#p5">联系方式</a>
-            </li>
-        </ul>
-    </div>
-    <div class="section">
-        <div class="img-box">
-            <img src="img/bg.jpg" alt="">
-            <img src="img/bg.jpg" alt="">
-            <img src="img/bg.jpg" alt="">
+    <div id="container">
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="#p1" class="logo">
+                        <img src="img/logo.png" alt="">
+                        <span>ZhangXueYun</span>
+                    </a>
+                </li>
+                <li data-menuanchor="p1"  class="active">
+                    <a href="#p1">首页</a>
+                </li>
+                <li data-menuanchor="p2">
+                    <a href="#p2">关于我</a>
+                </li>
+                <li data-menuanchor="p3">
+                    <a href="#p3">技能展示</a>
+                </li>
+                <li data-menuanchor="p4">
+                    <a href="#p4">项目经验</a>
+                </li>
+                <li data-menuanchor="p5">
+                    <a href="#p5">联系方式</a>
+                </li>
+            </ul>
         </div>
-        <div class="text-box">
-            <p>Gril form Small Tawn</p>
-            <p>我不太肯定我的方向，但我希望自己走的远一点。</p>
-            <div class="text-bottom">
-                <div class="line"></div>
-                <p>▪&nbsp;&nbsp;遇见更好的自己&nbsp;&nbsp;▪</p>
-                <div class="line"></div>
+        <div class="section">
+            <div class="img-box">
+                <img src="img/bg.jpg" alt="">
+                <img src="img/bg.jpg" alt="">
+                <img src="img/bg.jpg" alt="">
             </div>
-        </div>
-        <a class="button">Meet&nbsp;&nbsp; Me</a>
-    </div>
-    <div class="section">
-        <div class="two-left">
-            <div class="me-box">
-                <div class="me-img">
-                    <img src="img/gallery_06.jpg" alt="">
+            <div class="text-box">
+                <p>Gril form Small Tawn</p>
+                <p>我不太肯定我的方向，但我希望自己走的远一点。</p>
+                <div class="text-bottom">
+                    <div class="line"></div>
+                    <p>▪&nbsp;&nbsp;遇见更好的自己&nbsp;&nbsp;▪</p>
+                    <div class="line"></div>
                 </div>
             </div>
+            <a class="button" href="#p2">Meet&nbsp;&nbsp; Me</a>
         </div>
-        <div class="two-right">
-            <div class="my-box">
-                <div class="my-left">
-                    <ul>
-                        <li>•&nbsp;&nbsp;专业：软件技术</li>
-                        <li>•&nbsp;&nbsp;学历：大专</li>
-                        <li>•&nbsp;&nbsp;户籍：山西运城</li>
-                        <li>•&nbsp;&nbsp;星座：巨蟹</li>
-                        <li>•&nbsp;&nbsp;出生年月：1997-07</li>
-                    </ul>
-                    <div class="jindu">
-                        <div class="jindu-one">
-                            <span>审美能力</span>
-                            <div></div>
-                        </div>
-                        <div class="jindu-one">
-                            <span>沟通能力</span>
-                            <div></div>
-                        </div>
-                        <div class="jindu-one last">
-                            <span>工作经验</span>
-                            <div>
+        <div class="section">
+            <div class="two-left">
+                <div class="me-box">
+                    <div class="me-img">
+                        <img src="img/gallery_06.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="two-right">
+                <div class="my-box">
+                    <div class="border-top"></div>
+                    <div class="my-left">
+                        <ul>
+                            <li>•&nbsp;&nbsp;专业：软件技术</li>
+                            <li>•&nbsp;&nbsp;学历：大专</li>
+                            <li>•&nbsp;&nbsp;户籍：山西运城</li>
+                            <li>•&nbsp;&nbsp;星座：巨蟹</li>
+                            <li>•&nbsp;&nbsp;出生年月：1997-07</li>
+                        </ul>
+                        <div class="jindu">
+                            <div class="jindu-one">
+                                <span>审美能力</span>
                                 <div></div>
+                            </div>
+                            <div class="jindu-one">
+                                <span>沟通能力</span>
+                                <div></div>
+                            </div>
+                            <div class="jindu-one last">
+                                <span>工作经验</span>
+                                <div>
+                                    <div></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="my-right">
-                    <div class="fenlei">
-                        <div class="circle">
-                            <div class="circle2">PS</div>
+                    <div class="my-right">
+                        <div class="fenlei">
+                            <div class="circle">
+                                <div class="circle2">PS</div>
+                            </div>
+                            <div class="circle">
+                                <div class="circle2 cir-2">H5</div>
+                            </div>
+                            <div class="circle">
+                                <div class="circle2 cir-3">JS</div>
+                            </div>
+                            <div class="circle">
+                                <div class="circle2 cir-4">PHP</div>
+                            </div>
                         </div>
-                        <div class="circle">
-                            <div class="circle2 cir-2">H5</div>
-                        </div>
-                        <div class="circle">
-                            <div class="circle2 cir-3">JS</div>
-                        </div>
-                        <div class="circle">
-                            <div class="circle2 cir-4">PHP</div>
-                        </div>
+                        <h2>关于本人</h2>
+                        <p>我把工作看作一个学习的过程，用心，真诚，勤奋，时刻都能使我进步。我相信认真做事，用心交流，开启脑洞，有耐心，与团队合作，一定能塑造出完美的作品。</p>
+                        <span>责任心</span>
+                        <span>创造力</span>
+                        <span>高效工作率</span>
+                        <span>强效学习力</span>
                     </div>
-                    <h2>关于本人</h2>
-                    <p>我把工作看作一个学习的过程，用心，真诚，勤奋，时刻都能使我进步。我相信认真做事，用心交流，开启脑洞，有耐心，与团队合作，一定能塑造出完美的作品。</p>
-                    <span>责任心</span>
-                    <span>创造力</span>
-                    <span>高效工作率</span>
-                    <span>强效学习力</span>
                 </div>
             </div>
         </div>
+        <div class="section">
+            <div class="jd-box">
+                <p class="fade">身怀绝技&nbsp;&nbsp;拥有十八般武艺</p>
+                <div class="jn-left"></div>
+                <div class="jn-center">
+                    <canvas width="200" height="200"></canvas>
+                    <canvas width="200" height="200"></canvas>
+                    <canvas width="200" height="200"></canvas>
+                </div>
+                <span>H5</span>
+                <span>JS</span>
+                <span>Jquery</span>
+                <div class="jn-center jn-right">
+                    <canvas width="200" height="200"></canvas>
+                    <canvas width="200" height="200"></canvas>
+                    <canvas width="200" height="200"></canvas>
+                </div>
+                <span>PHP</span>
+                <span>vue</span>
+                <span>node</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="scene">
+                <ul>
+                    <li>
+                        <img src="img/1.jpg" alt="">
+                        <div class="mask">
+                            <div class="title">
+                                <a href="小米/index.html" target="_blank">小米</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/5.jpg" alt="">
+                        <div class="mask">
+                            <div class="title">
+                                <a href="中国移动/index.html" target="_blank">移动</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/3.jpg" alt="">
+                        <div class="mask">
+                            <div class="title">
+                                <a href="苏宁易购/index.html" target="_blank">苏宁</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/4.jpg" alt="">
+                        <div class="mask">
+                            <div class="title">
+                                <a href="装修/index.html" target="_blank">企业站</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/6.jpg" alt="">
+                        <div class="mask">
+                            <!--<div class="title">-->
+                                <!--<a href=""></a>-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/2.jpg" alt="">
+                        <div class="mask">
+                            <!--<div class="title">-->
+                                <!--<a href=""></a>-->
+                            <!--</div>-->
+                        </div>
+                    </li>
+                </ul>
+                <div class="next">&gt</div>
+                <div class="prev">&lt</div>
+            </div>
+        </div>
+        <div class="section">
+            <canvas id="J_dotLine" ></canvas>
+            <p>Contact</p>
+        </div>
+
     </div>
-    <div class="section">3</div>
-    <div class="section">4</div>
-    <div class="section">5</div>
-</div>
-</body>
+    </body>
 <script src="jquery-3.2.1.js"></script>
 <!--<script src="jquery.easing.min.js"></script>-->
 <script src="jquery.fullPage.js"></script>
+<script src="jquery.transit.js"></script>
 <script>
     $("#container").fullpage({
         verticalCentered: false,
         anchors: ["p1", "p2", "p3", "p4", "p5"],
-        sectionsColor: ["#fff", "#fff", "red", "#f88", "#99f"],
+        sectionsColor: ["#fff", "skyblue", "skyblue", "#fff", "#99f"],
         scrollingSpeed: 1000,
         navigation: true,
-        navigationPosition: "left",
-        navigationTooltips: ["111", "222", "333", "444"],
+//        navigationPosition: "left",
+//        navigationTooltips: ["111", "222", "333", "444"],
         continuousVertical: true,
         fixedElements:"#menu",
         menu:"#menu",
@@ -449,6 +750,8 @@
             }
         }
     });
+
+
     let n=0;
     let imgs=document.querySelector(".img-box");
     function fn(){
@@ -459,5 +762,213 @@
         imgs.style.marginLeft=-n/6+"px";
     }
     fn();
+
+    let canvasObj=document.querySelectorAll("canvas");
+    function progress(canvasObj,max,color){
+        let cobj=canvasObj.getContext("2d");
+        cobj.lineWidth="10";
+        cobj.lineCap="round";
+        cobj.font="14px 微软雅黑";
+        cobj.textAlign="center";
+        cobj.textBaseline="middle";
+        cobj.fillStyle="#fff";
+        cobj.strokeStyle=color;
+
+        let n=0;
+//        let st;
+        function fn(){
+            n++;
+            if(n<max){
+                requestAnimationFrame(fn);  // 按最小刷新实现动效
+            }
+            let angle=2*Math.PI*n/100-Math.PI/2;
+            cobj.save();
+            cobj.shadowColor="#fff";
+            cobj.shadowBlur="8";
+            cobj.clearRect(0,0,200,200);
+            cobj.beginPath();
+            cobj.arc(100,100,50,-Math.PI/2,angle);
+            cobj.stroke();
+            cobj.restore();
+            cobj.fillText(n+"%",100,100);
+        }
+        fn();
+//        document.body.onclick=function(){
+//            cancelAnimationFrame(st);
+//        };
+//        canvasObj.forEach(function(ele){
+//            progress(ele);
+//        })
+    }
+    progress(canvasObj[0],"87","red");
+    progress(canvasObj[1],"80","pink");
+    progress(canvasObj[2],"75","orangered");
+    progress(canvasObj[3],"82","skyblue");
+    progress(canvasObj[4],"90","#2DFF6C");
+    progress(canvasObj[5],"86","blue");
+
+
+    $(".next").click(function () {
+        $(".scene ul").transition({rotateY:"-=60"})
+    });
+    $(".prev").click(function () {
+        $(".scene ul").transition({rotateY:"+=60"})
+    })
+
+
+
+    ;(function(window){
+        function Dotline(option){
+            this.opt = this.extend({
+                dom:'J_dotLine',//画布id
+                cw:2000,//画布宽
+                ch:1500,//画布高
+                ds:500,//点的个数
+                r:0.5,//圆点半径
+                cl:'#000',//颜色
+                dis:100//触发连线的距离
+            },option);
+            this.c = document.getElementById(this.opt.dom);//canvas元素id
+            this.ctx = this.c.getContext('2d');
+            this.c.width = this.opt.cw;//canvas宽
+            this.c.height = this.opt.ch;//canvas高
+            this.dotSum = this.opt.ds;//点的数量
+            this.radius = this.opt.r;//圆点的半径
+            this.disMax = this.opt.dis*this.opt.dis;//点与点触发连线的间距
+            this.color = this.color2rgb(this.opt.cl);//设置粒子线颜色
+            this.dots = [];
+            //requestAnimationFrame控制canvas动画
+            var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+            var _self = this;
+            //增加鼠标效果
+            var mousedot = {x:null,y:null,label:'mouse'};
+            this.c.onmousemove = function(e){
+                var e = e || window.event;
+                mousedot.x = e.clientX - _self.c.offsetLeft;
+                mousedot.y = e.clientY - _self.c.offsetTop;
+            };
+            this.c.onmouseout = function(e){
+                mousedot.x = null;
+                mousedot.y = null;
+            };
+            //控制动画
+            this.animate = function(){
+                _self.ctx.clearRect(0, 0, _self.c.width, _self.c.height);
+                _self.drawLine([mousedot].concat(_self.dots));
+                RAF(_self.animate);
+            };
+        }
+        //合并配置项，es6直接使用obj.assign();
+        Dotline.prototype.extend = function(o,e){
+            for(var key in e){
+                if(e[key]){
+                    o[key]=e[key]
+                }
+            }
+            return o;
+        };
+        //设置线条颜色(参考{抄袭}张鑫旭大大，http://www.zhangxinxu.com/wordpress/2010/03/javascript-hex-rgb-hsl-color-convert/)
+        Dotline.prototype.color2rgb = function(colorStr){
+            var red = null,
+                    green = null,
+                    blue = null;
+            var cstr = colorStr.toLowerCase();//变小写
+            var cReg = /^#[0-9a-fA-F]{3,6}$/;//确定是16进制颜色码
+            if(cstr&&cReg.test(cstr)){
+                if(cstr.length==4){
+                    var cstrnew = '#';
+                    for(var i=1;i<4;i++){
+                        cstrnew += cstr.slice(i,i+1).concat(cstr.slice(i,i+1));
+                    }
+                    cstr = cstrnew;
+                }
+                red = parseInt('0x'+cstr.slice(1,3));
+                green = parseInt('0x'+cstr.slice(3,5));
+                blue = parseInt('0x'+cstr.slice(5,7));
+            }
+            return red+','+green+','+blue;
+        }
+        //画点
+        Dotline.prototype.addDots = function(){
+            var dot;
+            for(var i=0; i<this.dotSum; i++){//参数
+                dot = {
+                    x : Math.floor(Math.random()*this.c.width)-this.radius,
+                    y : Math.floor(Math.random()*this.c.height)-this.radius,
+                    ax : (Math.random() * 2 - 1) / 1.5,
+                    ay : (Math.random() * 2 - 1) / 1.5
+                }
+                this.dots.push(dot);
+            }
+        };
+        //点运动
+        Dotline.prototype.move = function(dot){
+            dot.x += dot.ax;
+            dot.y += dot.ay;
+            //点碰到边缘返回
+            dot.ax *= (dot.x>(this.c.width-this.radius)||dot.x<this.radius)?-1:1;
+            dot.ay *= (dot.y>(this.c.height-this.radius)||dot.y<this.radius)?-1:1;
+            //绘制点
+            this.ctx.beginPath();
+            this.ctx.arc(dot.x, dot.y, this.radius, 0, Math.PI*2, true);
+            this.ctx.stroke();
+        };
+        //点之间画线
+        Dotline.prototype.drawLine = function(dots){
+            var nowDot;
+            var _that = this;
+            //自己的思路：遍历两次所有的点，比较点之间的距离，函数的触发放在animate里
+            this.dots.forEach(function(dot){
+
+                _that.move(dot);
+                for(var j=0; j<dots.length; j++){
+                    nowDot = dots[j];
+                    if(nowDot===dot||nowDot.x===null||nowDot.y===null) continue;//continue跳出当前循环开始新的循环
+                    var dx = dot.x - nowDot.x,//别的点坐标减当前点坐标
+                            dy = dot.y - nowDot.y;
+                    var dc = dx*dx + dy*dy;
+                    if(Math.sqrt(dc)>Math.sqrt(_that.disMax)) continue;
+                    // 如果是鼠标，则让粒子向鼠标的位置移动
+                    if (nowDot.label && Math.sqrt(dc) >Math.sqrt(_that.disMax)/2) {
+                        dot.x -= dx * 0.02;
+                        dot.y -= dy * 0.02;
+                    }
+                    var ratio;
+                    ratio = (_that.disMax - dc) / _that.disMax;
+                    _that.ctx.beginPath();
+                    _that.ctx.lineWidth = ratio / 2;
+                    _that.ctx.strokeStyle = 'rgba('+_that.color+',' + parseFloat(ratio + 0.2).toFixed(1) + ')';
+                    _that.ctx.moveTo(dot.x, dot.y);
+                    _that.ctx.lineTo(nowDot.x, nowDot.y);
+                    _that.ctx.stroke();//不描边看不出效果
+
+                    //dots.splice(dots.indexOf(dot), 1);
+                }
+            });
+        };
+        //开始动画
+        Dotline.prototype.start = function(){
+            var _that = this;
+            this.addDots();
+            setTimeout(function() {
+                _that.animate();
+            }, 100);
+        }
+        window.Dotline = Dotline;
+    }(window));
+    //调用
+    window.onload = function(){
+        var dotline = new Dotline({
+            dom:'J_dotLine',//画布id
+            cw:2000,//画布宽
+            ch:1500,//画布高
+            ds:500,//点的个数
+            r:0.5,//圆点半径
+            cl:'#12FC41',//粒子线颜色
+            dis:100//触发连线的距离
+        }).start();
+    }
 </script>
 </html>
